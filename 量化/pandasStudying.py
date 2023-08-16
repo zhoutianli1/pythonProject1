@@ -36,7 +36,21 @@ print('多列数据:\n',df[['a','b']])
 #获取某行某列数据：使用[][]联合
 print('取某行某列数据：\n',df[0:1][['a','b']])
 print("取某行某列数据loc：\n",df.loc[['一'],['a','c']]) #iloc 行列都索引
+print("取某行某列数据loc：\n",df.loc[:,['a','c']]) #iloc 行列都索引
 print("取某行某列数据iloc：\n",df.iloc[0:2,1:2])   #iloc 行列都切片
+
+# 打印头部数据，仅查看数据示例时常用
+print(df.head())
+# 打印列标题
+print(df.columns)
+# 打印行
+print(df.index)
+# 打印指定列
+# print(df["name"])
+# 描述数据
+print(df.describe())
+
+
 
 
 #一维数据 Series:

@@ -24,20 +24,7 @@ def readfile(file_path):
     df = pd.read_excel(file_path, sheet_name = "Sheet1") # sheet_name不指定时默认返回全表数据
 
 
-    # 打印头部数据，仅查看数据示例时常用
-    print(df.head())
 
-    # 打印列标题
-    print(df.columns)
-
-    # 打印行
-    print(df.index)
-
-    # 打印指定列
-    #print(df["name"])
-
-    # 描述数据
-    print(df.describe())
     return df
 
 #写文件:
