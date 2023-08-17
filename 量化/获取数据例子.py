@@ -20,11 +20,11 @@ pro = ts.pro_api()
 #利用掉用pro里面的 方法：
 stock_basic-股票基本信息
 '''
-
-
 #具体参数作用去看官方文档
 #获取的指标名称
 fields='ts_code,symbol,name,area,industry,list_date,market,exchange'
 data = pro.stock_basic(exchange='', list_status='L', fields=fields)
 print(data)  #tushare返回数据格式： pandas
 dataToExcel.dataToExcel(data,'D:\data\getdata.xlsx')
+
+#======================================================
