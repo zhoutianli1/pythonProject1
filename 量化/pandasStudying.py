@@ -10,6 +10,60 @@ pandas是基于numpy数组构建的，但二者最大的不同是pandas是专门
     开发者是一个量化金融分析师，为了应对繁杂的财务数据，开发了pandas
 
     pandas中文网： https://www.pypandas.cn/
+
+。以下是一些Pandas中常用的主要函数和方法：
+数据读取与写入：
+pd.read_csv()：从CSV文件读取数据。
+pd.read_excel()：从Excel文件读取数据。
+pd.read_sql()：从SQL数据库读取数据。
+DataFrame.to_csv()：将数据保存为CSV文件。
+DataFrame.to_excel()：将数据保存为Excel文件。
+
+数据探索和查看：
+DataFrame.head()：查看DataFrame的前几行数据。
+DataFrame.tail()：查看DataFrame的后几行数据。
+DataFrame.info()：显示DataFrame的基本信息。
+DataFrame.describe()：生成关于数值列的统计信息。
+DataFrame.shape：返回DataFrame的行数和列数。
+
+数据选择和索引：
+DataFrame[column_name]：选择单列数据。
+DataFrame[[col1, col2]]：选择多列数据。
+DataFrame.loc[row_label, col_label]：通过标签选择数据。
+DataFrame.iloc[row_index, col_index]：通过整数位置选择数据。
+
+数据过滤和筛选：
+DataFrame[condition]：使用条件筛选数据。
+DataFrame.query()：使用查询字符串进行筛选。
+DataFrame.isin(values)：检查元素是否在指定的值中。
+
+数据处理和转换：
+DataFrame.drop()：删除行或列。
+DataFrame.fillna(value)：填充缺失值。
+DataFrame.replace(old_value, new_value)：替换特定值。
+DataFrame.groupby()：分组数据并进行聚合操作。
+DataFrame.apply()：应用函数到行或列。
+
+数据排序和排名：
+DataFrame.sort_values(by)：按指定列的值进行排序。
+Series.rank()：对数据进行排名。
+
+数据合并和连接：
+pd.concat()：连接多个DataFrame。
+DataFrame.merge()：根据共同列合并DataFrame。
+DataFrame.join()：根据索引或列合并DataFrame。
+
+数据统计和聚合：
+Series.mean()：计算平均值。
+Series.sum()：计算总和。
+Series.min()：找到最小值。
+Series.max()：找到最大值。
+DataFrame.groupby().agg()：进行自定义聚合操作。
+
+数据可视化：
+DataFrame.plot()：生成简单的数据可视化图表。
+DataFrame.hist()：绘制直方图。
+DataFrame.plot.scatter()：绘制散点图。
 '''
 #-- coding: utf-8 --
 import pandas as pd
