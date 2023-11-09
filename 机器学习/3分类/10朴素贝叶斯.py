@@ -55,11 +55,12 @@ def news():
 
     #4朴树贝叶斯 预估器
     estimator = MultinomialNB()  # alpha：默认值为1，为防止计算出的分类概率为0
-    estimator.fit(x_train,y_train)
+
     # 4.2 调用gridsearchCV-交叉验证，网格搜索
     param_grid = {"alpha": [1, 3, 2]}
     estimator = GridSearchCV(estimator, param_grid=param_grid, cv=5, n_jobs=-1)  # n_jobs就是用几个cpu跑
-
+    # 4.3训练模型
+    estimator.fit(x_train, y_train)
     # 5.1 基本评估方式
     score = estimator.score(x_test, y_test)
     print("最后预测的准确率为:\n", score)

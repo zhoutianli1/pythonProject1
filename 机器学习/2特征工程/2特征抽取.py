@@ -164,11 +164,11 @@ def text_chinese_tfidf_demo():
     # transfer = CountVectorizer(sparse=False)
     transfer = TfidfVectorizer(stop_words=['一种', '不会', '不要'])
     # 2、调用fit_transform
-    data = transfer.fit_transform(text_list,keyword=5)
+    data = transfer.fit_transform(text_list)
     print("文本特征抽取的结果：\n", data.toarray())   #返回值：3行（对应3个文本）；32列（对应32个特征名字）
     print("返回特征名字：\n", transfer.get_feature_names_out())
 
     return None
 
 if __name__=='__main__':
-    text_chinese_tfidf_demo()
+    text_count_demo()
